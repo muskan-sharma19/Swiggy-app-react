@@ -1,0 +1,2 @@
+why we need two cdn links for using react??
+Ans.. in first Link we are using the core files of react and in the second one we are using react dom for manipulating data inside the dom.
