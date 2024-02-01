@@ -1,3 +1,54 @@
 #heading1{
     color: blue;
 }
+.header{
+    /* flex-direction: row; */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    height:65px
+}
+.logo{
+    height: 150px;
+    width: 79px;
+    display:flex;
+    flex-direction: column;
+margin-top: -13px;
+}
+.ul-list{
+    display:flex;
+    flex-direction:row;
+    gap:50px;
+    list-style-type:none;
+    padding:0px 20px
+}
+.nav-items>ul>li{
+    font-size: 18px;
+}
+ .restro-card{
+    /* display: flex;
+    flex-direction:column; */
+    flex-wrap: wrap;
+    width:210px;
+    margin: 20px;
+} 
+ .cards{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+} 
+.restro-card:hover{
+    border:1px solid black;
+    cursor: pointer;
+}
+.search-bar{
+    padding: 10px;
+}
+.search-btn{
+    border-style: none;
+}
+.restro-img{
+    width:200px;
+    height: 150px;
+    border-radius: 15px;
+}
