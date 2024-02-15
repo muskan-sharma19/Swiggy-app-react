@@ -1,11 +1,11 @@
 import React from 'react'
-
+import {CLOUDINARY_IMAGE} from "../Utils/Constant"
 const RestroData = ({restro}) => {
   return ( 
         <div className="restro-card">
             <img
               className="restro-img"
-              src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restro?.info?.cloudinaryImageId}
+              src={CLOUDINARY_IMAGE+restro?.info?.cloudinaryImageId}
             ></img>
             <h4>{restro?.info?.name}</h4>
             <h5>{restro?.info?.avgRatingString}</h5>
