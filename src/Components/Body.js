@@ -19,7 +19,7 @@ const Body = () => {
   };
   const onClickFilterRestro = () => {
     const filteredData = restaurantList.filter(
-      (item) => item?.info?.avgRating >= "4"
+      (item) => item?.info?.avgRating >= "4.2"
     );
     setRestaurantList(filteredData);
   };
@@ -27,13 +27,15 @@ const Body = () => {
     const Data = restaurantList.filter((item) =>
       item?.info?.name.toLowerCase().includes(searchedData)
     );
+    console.log(Data,'dd');
     setRestaurantList(Data);
   };
-  if(restaurantList.length===0){
-    return (<Shimmer/>)
-  }
+  // if(restaurantList.length===0){
+  //   return (<Shimmer/>)
+  // }
+  console.log(restaurantList,'see',searchedData);
   return (
-    <div className="body-items">
+    (restaurantList.length===0)? <Shimmer/>:<div className="body-items">
       <div className="search-bar">
         <input
           type="text"

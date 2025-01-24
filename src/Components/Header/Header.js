@@ -1,5 +1,7 @@
-import Logo from "../Assets/Images/the-red-cafe.png";
+import Logo from "../../Assets/Images/the-red-cafe.png";
+import React from "react";
 const Header=()=>{
+    const[btnclck, setBtnclck]=React.useState("Login")
     return(
         <div className="header">
             <div className="logo">
@@ -11,6 +13,7 @@ const Header=()=>{
                         <li>About Us</li>
                         <li>Contact Us</li>
                         <li>Cart</li>
+                        <button type="button" class="btn btn-light loginbtn" onClick={()=>btnclck==='Login'? setBtnclck('Logout'):setbtnclck('Login')}>{btnclck}</button>
                     </ul>
                     </div>
             </div>    

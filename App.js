@@ -1,8 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./src/Components/Header";
 import Body from "./src/Components/Body";
-
+import Header from "./src/Components/Header/Header";
+import 'bootstrap/dist/css/bootstrap.css';
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import About from "./src/Components/About";
+import Contact from "./src/Components/Contact";
+import ErrorPage from "./src/Components/ErrorPage";
 // const heading = React.createElement(
 //   "h1",
 //   { id: "heading1" },
@@ -40,11 +45,27 @@ import Body from "./src/Components/Body";
 
 const AppLayout=() => {
       return (
-        <div className="app">
+        <div className="app" id="root">
             <Header/>
             <Body/>
         </div>
     )
-} 
+}
+const appRouter=createBrowserRouter([
+    {
+        path:"/",
+        element:<AppLayout/>,
+          errorElement:<ErrorPage/>
+    },
+    {
+        path:"/about",
+        element:<About/> 
+    },
+    {
+        path:"/contact",
+        element:<Contact/> 
+    }
+
+])
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter}/>);

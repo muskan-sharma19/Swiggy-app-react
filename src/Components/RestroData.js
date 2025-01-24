@@ -7,10 +7,12 @@ const RestroData = ({restro}) => {
               className="restro-img"
               src={CLOUDINARY_IMAGE+restro?.info?.cloudinaryImageId}
             ></img>
+        <div className="carddata">
             <h4>{restro?.info?.name}</h4>
             <h5>{restro?.info?.avgRatingString}</h5>
-            <h4>{restro?.info?.cuisines.join(",")}</h4>
-            <h4>{restro?.info?.areaName}</h4>
+            <div className='cuisines'>{restro?.info?.cuisines.join(",")}</div>
+            <div>{restro?.info?.areaName}</div>
+            </div>
   </div>
   )
 }
